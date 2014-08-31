@@ -33,3 +33,15 @@ rails-api new ember-wknd-server --skip-sprockets --database=postgresql
 ```
 
 Add `thin` and `active_model_serializers` to gemfile
+
+Only use Postgress for production.
+
+```ruby
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+```

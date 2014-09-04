@@ -1,0 +1,3 @@
+class GuestSerializer < UserSerializer
+  
+end

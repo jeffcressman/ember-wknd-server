@@ -1,0 +1,3 @@
+class HostSerializer < UserSerializer
+  
+end

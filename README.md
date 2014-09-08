@@ -8,7 +8,6 @@ Work in progress.
 
 ## TODO
 
-* add routing for API requests
 * add authentication
 * add Heroku deployment option
 * add more deployment options via <http://rubber.io>

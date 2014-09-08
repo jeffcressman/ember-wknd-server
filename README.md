@@ -8,6 +8,8 @@ Work in progress.
 
 ## TODO
 
+* CRUD for guests, speakers, and workshops
+* register for a workshop
 * add authentication
 * add Heroku deployment option
 * add more deployment options via <http://rubber.io>

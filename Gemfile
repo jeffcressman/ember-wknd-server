@@ -8,8 +8,6 @@ gem 'spring', :group => :development
 
 gem 'thin'
 
-gem 'active_model_serializers'
-
 group :development, :test do
   gem 'sqlite3'
 end
@@ -18,6 +16,9 @@ group :production do
   gem 'pg'
 end
 
+gem 'rack-cors', :require => 'rack/cors'
+
+gem 'active_model_serializers', '~>0.8.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

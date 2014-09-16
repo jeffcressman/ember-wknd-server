@@ -6,4 +6,5 @@ class WorkshopSerializer <  ActiveModel::Serializer
   # apparently the wording 'has_one' doesn't mean the same thing as in ActiveRecord terminology
   # http://stackoverflow.com/questions/13125214/active-model-serializers-belongs-to
   has_one :speaker 
+  has_many :registrations
 end

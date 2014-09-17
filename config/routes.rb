@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+	devise_for :users, controllers: { sessions: 'sessions' }
+
+	# resources :users,  :except => [:edit, :new] # think I need this just for devise as a single login entry point
 	resources :workshops, :except => [:edit, :new]
 	resources :speakers, :except => [:edit, :new]
 	resources :guests, :except => [:edit, :new]

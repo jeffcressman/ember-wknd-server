@@ -1,4 +1,7 @@
 class WorkshopsController < ApplicationController
+	# Devise requires that we are authenticated before we can access this controller
+	before_action :authenticate_user!
+
 	def index
 		@workshops = Workshop.all
 		render json: @workshops

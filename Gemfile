@@ -10,6 +10,8 @@ gem 'thin'
 
 group :development, :test do
   gem 'sqlite3'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :production do
@@ -19,6 +21,8 @@ end
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'active_model_serializers', '~>0.8.2'
+
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

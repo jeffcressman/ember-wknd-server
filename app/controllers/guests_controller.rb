@@ -1,4 +1,7 @@
 class GuestsController < ApplicationController
+	# Devise requires that we are authenticated before we can access this controller
+	before_action :authenticate_user!
+		
 	def index
 		@guests = Guest.all
 		render json: @guests

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+	namespace :api do
+	  get :csrf, to: 'csrf#index'
+	end
+
 	devise_for :users, controllers: { sessions: 'sessions' }
 
 	# resources :users,  :except => [:edit, :new] # think I need this just for devise as a single login entry point

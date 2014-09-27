@@ -42,6 +42,8 @@ Registration.create(guest: guest, workshop: w8, name: w8.name)
 Registration.create(guest: guest, workshop: w9, name: w9.name)
 Registration.create(guest: guest, workshop: w10, name: w10.name)
 
+host = Host.create(name: 'Sam', email: 'sam@somewhere.com', password: 'password')
+
 
 
 

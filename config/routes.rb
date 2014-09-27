@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 	resources :workshops, :except => [:edit, :new]
 	resources :speakers, :except => [:edit, :new]
 	resources :guests, :except => [:edit, :new]
+	resources :hosts, :except => [:edit, :new]
 	resources :registrations, :except => [:edit, :new]
 
   # The priority is based upon order of creation: first created -> highest priority.

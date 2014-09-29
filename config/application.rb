@@ -16,6 +16,8 @@ Bundler.require(*Rails.groups)
 module EmberWkndServer
   class Application < Rails::Application
 
+  	# config.action_dispatch.perform_deep_munge = false # Just to test saving Speakers with no Workshop ids
+
 		config.assets.enabled = false
 
 		config.middleware.use Rack::Cors do

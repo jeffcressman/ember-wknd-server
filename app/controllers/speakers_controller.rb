@@ -38,6 +38,6 @@ class SpeakersController < ApplicationController
 	# use strong params
 	private
 	def speaker_params
-		params.require(:speaker).permit(:name, :bio, :workshop_ids => [])
+		params.require(:speaker).permit(:name, :email, :password, :bio, :workshop_ids => [])
 	end
 end

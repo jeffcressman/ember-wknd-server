@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: ember-wknd-server_production
-  username: ember-wknd-server
-  password: <%= ENV['EMBER-WKND-SERVER_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: ember-wknd-server_production
+#   username: ember-wknd-server
+#   password: <%= ENV['EMBER-WKND-SERVER_DATABASE_PASSWORD'] %>

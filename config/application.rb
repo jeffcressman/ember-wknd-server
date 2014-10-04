@@ -20,12 +20,19 @@ module EmberWkndServer
 
 		config.assets.enabled = false
 
-		config.middleware.use Rack::Cors do
-		  allow do
-		    origins '*'
-		    resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
-		  end
-		end
+		# config.middleware.use Rack::Cors do
+		#   allow do
+		#     origins '*'
+		#     resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
+		#   end
+		# end
+
+    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end		
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

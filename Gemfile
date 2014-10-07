@@ -6,10 +6,9 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-gem 'thin'
-
 group :development, :test do
   gem 'sqlite3'
+  gem 'thin'
   gem "better_errors"
   gem "binding_of_caller"
 end
@@ -17,6 +16,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'unicorn'
 end
 
 gem 'rack-cors', :require => 'rack/cors'
@@ -30,9 +30,6 @@ gem 'devise'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development

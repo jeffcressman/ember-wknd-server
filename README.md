@@ -83,3 +83,13 @@ rails-api g migration AddSpeakerRefToWorkshops speaker:references
 rake db:migrate
 ```
 Could probably also have done `rails g scaffold Comment post:references` to add the belongs_to relationship.
+
+## Heroku
+
+Get the database credentials for connecting externally
+
+```bash
+heroku pg:credentials DATABASE
+```
+
+Switch to recommended Unicorn server [here](https://devcenter.heroku.com/articles/getting-started-with-rails4#webserver)

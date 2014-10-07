@@ -41,7 +41,8 @@ Registration:   name, guest, workshop
 ```bash
 rvm gemset create ember-wknd
 rvm gemset use ember-wknd
-echo "rvm ruby-2.1.2@ember-wknd" >> .rvmrc
+echo "ruby-2.1.2" >> .ruby-version
+echo "ember-wknd" >> .ruby-gemset
 gem install rails-api
 rails-api new ember-wknd-server --skip-sprockets --database=postgresql
 ```

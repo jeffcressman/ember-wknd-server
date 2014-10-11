@@ -6,7 +6,12 @@ Rails.application.routes.draw do
 
 	devise_for :users, controllers: { sessions: 'sessions' }
 
-	# resources :users,  :except => [:edit, :new] # think I need this just for devise as a single login entry point
+	# Not working. current returns null
+	# devise_scope :user do
+	# 	get "sessions/current" => "sessions#current"
+	# end
+
+	resources :users,  :only => [:show]
 	resources :workshops, :except => [:edit, :new]
 	resources :speakers, :except => [:edit, :new]
 	resources :guests, :except => [:edit, :new]

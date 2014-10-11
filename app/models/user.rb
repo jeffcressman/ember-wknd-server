@@ -19,5 +19,5 @@ class User < ActiveRecord::Base
         token = Devise.friendly_token
         break token unless User.where(authentication_token: token).first
       end
-    end         
+    end
 end

@@ -18,6 +18,33 @@ Rails.application.routes.draw do
 	resources :hosts, :except => [:edit, :new]
 	resources :registrations, :except => [:edit, :new]
 
+
+	# routes for admin interface
+	get     'admin/speakers'      => 'speakers#index'
+	post    'admin/speakers'      => 'speakers#create'
+	put     'admin/speaker'       => 'speakers#update'
+	delete  'admin/speaker'       => 'speakers#destroy'
+
+	get     'admin/workshops'     => 'workshops#index'
+	post    'admin/workshops'     => 'workshops#create'
+	put     'admin/workshop'      => 'workshops#update'
+	delete  'admin/workshop'      => 'workshops#destroy'
+
+	get     'admin/registrations' => 'registrations#index'
+	post    'admin/registrations' => 'registrations#create'
+	put     'admin/registration'  => 'registrations#update'
+	delete  'admin/registration'  => 'registrations#destroy'
+
+	get     'admin/guests'        => 'guests#index'
+	post    'admin/guests'        => 'guests#create'
+	put     'admin/guest'         => 'guests#update'
+	delete  'admin/guest'         => 'guests#destroy'
+
+	get     'admin/hosts'         => 'hosts#index'
+	post    'admin/hosts'         => 'hosts#create'
+	put     'admin/host'          => 'hosts#update'
+	delete  'admin/host'          => 'hosts#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -41,10 +41,11 @@ Registration:   name, guest, workshop
 ```bash
 rvm gemset create ember-wknd
 rvm gemset use ember-wknd
-echo "ruby-2.1.2" >> .ruby-version
-echo "ember-wknd" >> .ruby-gemset
 gem install rails-api
 rails-api new ember-wknd-server --skip-sprockets --database=postgresql
+cd ember-wknd-server
+echo "ruby-2.1.2" >> .ruby-version
+echo "ember-wknd" >> .ruby-gemset
 ```
 
 Add `thin` and `active_model_serializers` to gemfile
